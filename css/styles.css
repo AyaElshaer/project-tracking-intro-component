@@ -27,7 +27,7 @@ body {
 body::before {
   content: "";
   width: 50%;
-  height: 80%;
+  height: 60%;
   position: absolute;
   top: -5px;
   right: -20px;
@@ -181,7 +181,7 @@ main .img-container img {
   }
   body::before {
     width: 60%;
-    height: 50%;
+    height: 57%;
   }
 }
 @media (max-width: 900px) {
