@@ -1,0 +1,284 @@
+:root {
+  --Red: hsl(0, 100%, 68%);
+  --VeryDarkBlue: hsl(230, 29%, 20%);
+  --DarkGrayishBlue: hsl(230, 11%, 40%);
+  --GrayishBlue: hsl(231, 7%, 65%);
+  --LightGrayishBlue: hsl(207, 33%, 95%);
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Barlow", sans-serif;
+  overflow-x: hidden;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+}
+
+body::before {
+  content: "";
+  width: 50%;
+  height: 80%;
+  position: absolute;
+  top: -5px;
+  right: -20px;
+  border-bottom-left-radius: 7.5rem;
+  background-color: var(--LightGrayishBlue);
+  z-index: -1;
+}
+
+.header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Barlow Condensed", sans-serif;
+  margin: 4rem 5rem;
+}
+#bar,
+#hamburger,
+#close {
+  display: none;
+}
+
+.header nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header nav ul li {
+  margin-left: 3rem;
+  font-weight: bold;
+  font-size: 1.8rem;
+  letter-spacing: 2px;
+}
+
+.header nav ul li:last-child {
+  color: var(--GrayishBlue);
+  margin-right: 5rem;
+  margin-left: 0;
+}
+
+.header nav ul #dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  margin: 0 3rem;
+  background-color: var(--GrayishBlue);
+}
+
+main {
+  margin-top: 8rem;
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+  padding-right: 0;
+}
+main .content {
+  width: 35%;
+  margin-left: 3rem;
+}
+.content .new {
+  display: flex;
+  align-items: center;
+}
+.content .new span:first-child {
+  color: #fff;
+  background-color: black;
+  display: inline-block;
+  font-size: 1.3rem;
+  border-radius: 1.2rem;
+  padding: 4px 19px;
+  font-weight: 700;
+  margin-right: 2rem;
+}
+.content .new span:last-child {
+  letter-spacing: 5px;
+  color: var(--GrayishBlue);
+  font-size: 1.8rem;
+  font-family: "Barlow Condensed", sans-serif;
+}
+
+main .content h1 {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 700;
+  font-size: 5.5rem;
+  color: var(--VeryDarkBlue);
+  margin: 2rem 0;
+  width: 90%;
+}
+main .content p {
+  width: 60%;
+  text-transform: initial;
+  margin: 2rem 0;
+  color: var(--DarkGrayishBlue);
+}
+main .content .demo {
+  display: flex;
+  align-items: center;
+  margin-top: 3rem;
+  gap: 1.2rem;
+}
+
+main .content .demo button {
+  width: 15rem;
+  height: 4rem;
+  border-radius: 5px;
+  border: none;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  color: var(--LightGrayishBlue);
+  background-color: var(--Red);
+  font-weight: bold;
+  font-family: "Barlow Condensed", sans-serif;
+  letter-spacing: 1px;
+}
+
+main .content .demo p {
+  font-size: 1.8rem;
+  letter-spacing: 3px;
+  color: var(--GrayishBlue);
+  text-transform: uppercase;
+  font-family: "Barlow Condensed", sans-serif;
+}
+main .img-container {
+  width: 65%;
+  overflow: hidden;
+  margin-right: 0;
+}
+main .img-container img {
+  width: 100%;
+  height: auto;
+  transform: translate(30%);
+  margin-right: -50px;
+}
+
+@media (max-width: 1200px) {
+  main .content h1 {
+    font-size: 4.5rem;
+    width: 100%;
+  }
+  main .content p {
+    width: 70%;
+  }
+}
+@media (min-width: 900px) {
+  main .content {
+    width: 40%;
+  }
+  main .img-container {
+    width: 60%;
+  }
+  body::before {
+    width: 60%;
+    height: 50%;
+  }
+}
+@media (max-width: 900px) {
+  .header nav ul {
+    display: none;
+  }
+  #bar,
+  #hamburger {
+    display: block;
+  }
+
+  .header nav ul.show,
+  #close.show {
+    display: block;
+  }
+  #hamburger.hidden {
+    display: none;
+  }
+
+  .header {
+    position: relative;
+  }
+  .header nav ul {
+    width: 80%;
+    flex-direction: column;
+    border: 1x solid var(--DarkGrayishBlue);
+    text-align: center;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(15%, 22%);
+    z-index: 100;
+    box-shadow: 0 22px 16px 5px rgb(0 0 0 / 7%);
+    padding: 30px;
+  }
+
+  ul li {
+    margin: 2rem 3rem 1rem;
+    text-align: center;
+  }
+  .header nav ul #dot {
+    width: 90%;
+    height: 0.5px;
+    border-radius: unset;
+    margin-top: 10px;
+  }
+  .header nav ul li:last-child {
+    margin: 2rem 3rem 1rem;
+  }
+  main {
+    flex-direction: column-reverse;
+  }
+  main .content {
+    width: 100%;
+    margin-top: 10rem;
+    margin-bottom: 4rem;
+  }
+  main .img-container {
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+  }
+  main .img-container img {
+    width: 130%;
+    height: 80%;
+    transform: translate(10%);
+  }
+  main .content h1 {
+    width: 80%;
+  }
+  body::before {
+    height: 60%;
+  }
+}
+
+@media (max-width: 450px) {
+  body::before {
+    height: 54%;
+  }
+  main .content h1 {
+    width: 90%;
+    font-size: 4rem;
+  }
+  main .content .demo p {
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+  }
+  .content .new span:last-child {
+    letter-spacing: 4px;
+  }
+  main .content p {
+    width: 80%;
+  }
+  main .img-container img {
+    width: 120%;
+    height: 100%;
+  }
+}

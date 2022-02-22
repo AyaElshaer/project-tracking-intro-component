@@ -1,39 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Project tracking intro component</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Frontend Mentor | Project tracking intro component</title>
+  </head>
+  <body>
+    <header class="header">
+      <nav>
+        <img class="logo" src="images/logo.svg" alt="logo" />
+        <ul>
+          <li>Product</li>
+          <li>Features</li>
+          <li>Pricing</li>
+          <li id="dot"></li>
+          <li>Login</li>
+        </ul>
+        <div id="bar">
+          <img id="hamburger" src="images/icon-hamburger.svg" alt="" />
+          <img id="close" src="images/icon-close.svg" alt="" />
+        </div>
+      </nav>
+    </header>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-  Product
-  Features
-  Pricing
-  Login
+    <main>
+      <div class="content">
+        <div class="new">
+          <span>New</span>
+          <span>Monograph Dashboard</span>
+        </div>
+        <h1>Powerful insights into your team</h1>
+        <p>Project planning and time tracking for agile teams</p>
+        <div class="demo">
+          <button>Schedule a demo</button>
+          <p>to see a live preview</p>
+        </div>
+      </div>
+      <div class="img-container">
+        <img src="images/illustration-devices.svg" alt="illustration" />
+      </div>
+    </main>
 
-  New
-  Monograph Dashboard
-
-  Powerful insights into your team
-  Project planning and time tracking for agile teams
-
-  Schedule a demo
-  to see a live preview
-  
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
-    </p>
-  </footer>
-</body>
+    <script src="js/main.js"></script>
+  </body>
 </html>
