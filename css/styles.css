@@ -25,12 +25,11 @@ body {
 }
 
 body::before {
+    width: 65%;
   content: "";
-  width: 50%;
-  height: 60%;
   position: absolute;
   top: -5px;
-  right: -20px;
+  right: -40px;
   border-bottom-left-radius: 7.5rem;
   background-color: var(--LightGrayishBlue);
   z-index: -1;
@@ -85,8 +84,8 @@ main {
   padding-right: 0;
 }
 main .content {
-  width: 35%;
-  margin-left: 3rem;
+  width: 50%;
+  margin-left: 8rem;
 }
 .content .new {
   display: flex;
@@ -152,7 +151,7 @@ main .content .demo p {
   font-family: "Barlow Condensed", sans-serif;
 }
 main .img-container {
-  width: 65%;
+  width: 50%;
   overflow: hidden;
   margin-right: 0;
 }
@@ -180,7 +179,7 @@ main .img-container img {
     width: 60%;
   }
   body::before {
-    width: 60%;
+    width: 52%;
     height: 57%;
   }
 }
@@ -256,12 +255,14 @@ main .img-container img {
   }
   body::before {
     height: 60%;
+   
   }
 }
 
 @media (max-width: 450px) {
   body::before {
-    height: 54%;
+    height: 50%;
+    
   }
   main .content h1 {
     width: 90%;
