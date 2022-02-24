@@ -47,7 +47,9 @@ body::before {
 #close {
   display: none;
 }
-
+#bar:hover{
+    cursor:pointer;
+}
 .header nav ul {
   list-style: none;
   display: flex;
